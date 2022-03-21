@@ -1,10 +1,17 @@
 {% extends "layout.html" %} {% block content %}
-<div class="container" style="background-color: white;">
-  <div class="row justify-content-center mb-4 ">
+<div class="container border" style="background-color: white">
+  <div class="row justify-content-center mb-4">
     <iframe
       src="https://docs.google.com/document/d/e/2PACX-1vT055HB-oawyM9KBwFN6xf7ECBIATS0LUqR75-D2c46xlsjjhLgnR16vVvvxBpxtg/pub?embedded=true"
-      style="width: 9in; height: 11in;"
+      style="width: 11in; height: 9in"
     ></iframe>
   </div>
 </div>
+<div class="container">
+    <div class="row m-3">
+      <div class="col text-center">
+        <a href="{{ url_for('download_copy') }}" class="btn btn-outline-dark"><h1 class="display-6" style="font-size: 1.5em;">Download Copy</h1></a>
+      </div>
+    </div>
+  </div>
 {% endblock content %}
