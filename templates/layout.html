@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="static/logo.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stefan Nelson</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <style>
+      .grow {
+        transition: all 0.2s ease-in-out;
+      }
+
+      .grow:hover {
+        transform: scale(1.3);
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('home') }}">
+          <img src="/static/logo.png" alt="" width="36" height="36" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 pt-2">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{{ url_for('aboutMe') }}"
+                ><h1 class="display-6" style="font-size: 1.5em;">About Me</h1></a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                aria-current="page"
+                href="{{ url_for('resume') }}"
+                ><h1 class="display-6" style="font-size: 1.5em;">Resume</h1></a
+              >
+            </li>
+            <li class="nav-item" aria-current="page">
+              <a
+                class="nav-link"
+                href="{{ url_for('projects') }}"
+                ><h1 class="display-6" style="font-size: 1.5em;">Projects</h1></a
+              >
+            </li>
+            <li class="nav-item active" aria-current="page">
+              <a
+                class="nav-link"
+                href="https://github.com/StefanHNelson0916"
+                target="_blank"
+                ><h1 class="display-6" style="font-size: 1.5em;">Github</h1></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <div class="container">
+      <footer class="py-3 fixed-bottom" style="height: 100px">
+        <ul class="nav justify-content-center border-bottom pb-1 mb-1">
+          <li class="nav-item">
+            <a href="{{ url_for('home') }}" class="lead nav-link px-2 text-muted" style="font-size:1em;"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="lead nav-link px-2 text-muted" style="font-size:1em;">Contact</a>
+          </li>
+        </ul>
+        <p class="lead text-center text-muted" style="font-size:1em;">© 2022 Stefan Nelson</p>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
