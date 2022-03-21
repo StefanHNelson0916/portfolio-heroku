@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 
 app = Flask(__name__)
 
@@ -21,6 +21,10 @@ def resume():
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
+
+@app.route('/download')
+def download_copy():
+    return send_file('static/resume.pdf', attachment_filename='StefanHNelson-resume.pdf')
 
 if __name__ == "__main__":
     app.run()
