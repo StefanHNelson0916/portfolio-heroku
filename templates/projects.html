@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+  <div class="row mb-4 mt-4">
+    <div class="col">
+      <a
+        class="project-option"
+        data-bs-toggle="collapse"
+        href="#pythonWebService"
+        role="button"
+        aria-expanded="false"
+        aria-controls="collapseExample"
+        style="text-decoration: none"
+      >
+        <h1 class="display-6">Python Web Service</h1>
+      </a>
+      <div class="collapse" id="pythonWebService">
+        <div class="card card-body">
+          <p class="lead">
+            <strong>*Work in Progress*</strong><br>
+            <strong>Description: </strong>Mock website that serves as a portal to help contractors and
+            customers connect. It displays projects that are currently being worked as well as proposed projects from customers.
+            Contractors can upload the skills they offer onto their profile so that customer can see who is available to hire for the skills they need.
+            <br>
+            <strong>Back End: </strong>Flask, mySQL
+            <br>
+            <strong>Front End: </strong>Bootstrap
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
